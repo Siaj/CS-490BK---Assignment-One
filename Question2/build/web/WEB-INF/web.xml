@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>FamousQuoteServlet</servlet-name>
+        <servlet-class>com.cs490.assign1.FamousQuoteServlet</servlet-class>
+        <init-param>
+            <param-name>famousQuote</param-name>
+            <param-value>Put your hand on a hot stove for a minute and it seems like an hour. Sit with a pretty girl for an hour, and it seems like a minute.</param-value>
+        </init-param>
+    </servlet>
+    <servlet>
+        <servlet-name>GreetingServlet</servlet-name>
+        <servlet-class>com.cs490.assign1.GreetingServlet</servlet-class>
+        <init-param>
+            <param-name>greetings</param-name>
+            <param-value>Happy Birthday</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FamousQuoteServlet</servlet-name>
+        <url-pattern>/FamousQuoteServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GreetingServlet</servlet-name>
+        <url-pattern>/GreetingServlet</url-pattern>
+    </servlet-mapping>
+    <context-param>
+        <param-name>forAll</param-name>
+        <param-value>I can access the context parameter</param-value>
+    </context-param>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>

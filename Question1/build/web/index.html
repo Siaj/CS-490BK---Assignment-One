@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>An Order Form</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body style="background: azure">
+        <h2 style="text-align: center">Order Form</h2>
+        <br/>
+        <form name="purchaseForm" method="POST" action="/ReadAllParam/ReadParamServlet">
+            <label>Item number:</label> <input type="text" name="itemNum"/><br/>
+            <label>Description:</label> <input type="text" name="description"/><br/>
+            <label>Price Each:</label> <input type="text" name="price" placeholder="$"/>
+
+            <hr/>
+
+            <label>First Name:</label> <input type="text" name="firstName"/><br/>
+            <label>Last Name:</label> <input type="text" name="lastName"/><br/>
+            <label>Middle Name:</label> <input type="text" name="initial"/><br/>
+            <label>Shipping Address:</label> <textarea name="address"></textarea><br/>
+
+            <label>Credit Card:</label>
+            <div>
+                <label><input type="radio" name="cardType" value="Visa">Visa</label><br/>
+                <label><input type="radio" name="cardType" value="MasterCard">MasterCard</label><br/>
+                <label><input type="radio" name="cardType" value="American Express">American Express</label><br/>
+                <label><input type="radio" name="cardType" value="Discover">Discover</label><br/>
+                <label><input type="radio" name="cardType" value="Java SmartCard">Java SmartCard</label><br/>
+            </div>
+            
+            <label>Credit Card Number:</label> <input type="password" name="cardNum"/><br/>
+            <label>Repeat Credit Card Number:</label> <input type="password" name="cardNum"/><br/><br/>
+            
+            <input type="submit" value="Submit"/>            
+
+        </form>
+    </body>
+</html>
