@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Hello') {
       steps {
-        echo "Hello from Organization Jenkinsfile"
+        echo "Hello from Organization Jenkinsfile - I am from ${env.BRANCH_NAME}"
       }
     }
   }
