@@ -11,6 +11,13 @@ pipeline {
       steps {
         echo "Hello from Organization - all environment variable are:"
         sh 'printenv'
+        echo "The build Id was: ${BUILD_ID}"
+      }
+    }
+
+    stage('Bye Now') {
+      steps {
+        echo "Jenkins Agent for this build is: ${JENKINS_AGENT_NAME}"
       }
     }
   }
