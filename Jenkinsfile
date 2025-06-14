@@ -17,7 +17,8 @@ pipeline {
 
     stage('Bye Now') {
       steps {
-        echo "Jenkins Agent for this build is: ${JENKINS_AGENT_NAME}"
+        echo "Jenkins Agent for this build was: ${JENKINS_AGENT_NAME}"
+        echo "Git commit hash: ${GIT_COMMIT}"
       }
     }
   }
